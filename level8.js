@@ -42,4 +42,57 @@ function checkAlive (health) {
 
 
 
+// My head is at the wrong end!
+
+// You're at the zoo... all the meerkats look weird. Something has gone terribly wrong - someone has gone and switched their heads and tails around!
+
+// Save the animals by switching them back. You will be given an array which will have three values (tail, body, head). It is your job to re-arrange the array so that the animal is the right way round (head, body, tail).
+
+// Same goes for all the other arrays/lists that you will get in the tests: you have to change the element positions with the same exact logics - simples!
+
+
+function fixTheMeerkat(arr) {
+  var arr2 = [];
+  for(var i = arr.length-1; i >= 0; i--) {
+    arr2.push(arr[i]);
+  }
+  return arr2;
+}
+
+
+
+//   SpeedCode #2 - Array Madness
+
+//   Objective
+
+//   Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
+
+function arrayMadness(a, b) {
+  var square = 0;
+  var aArray = [];
+  var bArray = [];
+  var aCount = 0;
+  var bCount = 0;
+  for (var i = 0; i < a.length; i++) {
+    square = a[i]*a[i];
+    aArray.push(square);
+  };
+  for (var j = 0; j < b.length; j++) {
+    square = b[j]*b[j]*b[j];
+    bArray.push(square);
+  }
+  for (var k = 0; k < aArray.length; k++) {
+    aCount = aCount + aArray[k];
+  }
+  for (var l = 0; l < bArray.length; l++) {
+    bCount = bCount + bArray[l];
+  }
+  if(aCount > bCount) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+arrayMadness([1,2,3], [2,3,4]);
 
