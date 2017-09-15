@@ -2,11 +2,11 @@
 // "Hello, [name]!" or "Hello there!"
 // based on the input
 
-function sayHello (name) {
+function sayHello(name) {
   // You can print to STDOUT for debugging like you normally would:
   console.log(name.length);
   if (name.length > 0) {
-          return "Hello, " + name;
+          return "Hello, " + name + "!";
 
   } else {
             return "Hello there!";
